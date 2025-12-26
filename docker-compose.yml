@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: devdash-db
+    environment:
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=devpass_2025
+      - POSTGRES_DB=devdash_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

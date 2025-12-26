@@ -1,0 +1,23 @@
+{
+  "name": "DevDash-FullStack",
+  "build": { 
+    "dockerfile": "Dockerfile" 
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+  "customizations": {
+    "jetbrains": {
+      "plugins": [
+        "com.intellij.lang.jsgraphql",
+        "me.fuzhou.MappingGenerator",
+        "com.intellij.prettier"
+      ]
+    }
+  },
+  "forwardPorts": [5000, 5001, 5173, 5432],
+  "postCreateCommand": "dotnet tool install --global dotnet-ef || dotnet tool update --global dotnet-ef"
+}
