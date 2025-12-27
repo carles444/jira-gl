@@ -1,0 +1,6 @@
+@DevDash.Api_HostAddress = http://localhost:5133
+
+GET {{DevDash.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
